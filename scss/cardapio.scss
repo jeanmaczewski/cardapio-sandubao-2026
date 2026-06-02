@@ -1,0 +1,119 @@
+@use 'variables' as *;
+
+// ── Cards de itens (lanches, porções, empanados) ───
+.lista-itens {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  li {
+    background: $branco;
+    border: 1px solid $cinza-brd;
+    border-radius: $radius;
+    padding: 0.85rem 1rem;
+    box-shadow: $sombra;
+
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      background: $amarelo-claro;
+
+      box-shadow: 0 4px 16px rgba(44, 34, 24, 0.15);
+      cursor: pointer;
+      border-color: black;
+
+      .item__nome {
+        color: $vermelho-dk;
+      }
+
+      .item__desc {
+        color: $azul-escuro;
+      }
+    }
+  }
+
+  // Destaque para o X-Sandubão (item especial)
+  .item--destaque {
+    grid-column: 1 / -1;
+    border-color: $amarelo;
+  }
+}
+
+.item__nome {
+  font-weight: 700;
+  font-size: 1rem;
+  color: $texto;
+}
+
+.item__desc {
+  font-size: 0.85rem;
+  color: $texto-sub;
+  margin-top: 0.2rem;
+}
+
+// ── Lista simples (bebidas) ────────────────────────
+.lista-simples {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+
+  li {
+    background: $branco;
+    border: 1px solid $cinza-brd;
+    border-radius: $radius;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      background-color: $amarelo-claro;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(44, 34, 24, 0.15);
+      cursor: pointer;
+    }
+
+    // Bolinha decorativa
+    &::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: $amarelo;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background-color: $verde;
+    }
+  }
+}
+
+// ── Destaque de preço ──────────────────────────────
+.destaque-preco {
+  background: $amarelo;
+  border-radius: $radius;
+  padding: 1rem 1.25rem;
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  p {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: $texto;
+  }
+
+  span {
+    color: $vermelho-dk;
+  }
+}

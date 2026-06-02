@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+// ── Título principal (h1) ──────────────────────────
+.cardapio__h2 {
+  font-family: $font-titulo;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  color: $vermelho;
+  margin-bottom: 2rem;
+}
+
+// ── Título de seção ────────────────────────────────
+.secao__titulo {
+  font-family: $font-titulo;
+  font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $vermelho;
+  border-bottom: 3px solid $amarelo;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1.2rem;
+}
+// ── Links Sociais ─────────────────────────────────
+.logo__whats {
+  left: 1rem;
+  bottom: 0.8rem;
+  width: 2.7rem;
+}
+.logo__insta {
+  left: 1rem;
+  bottom: 0.8rem;
+  width: 2.7rem;
+}

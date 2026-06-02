@@ -1,0 +1,12 @@
+// ════════════════════════════════════════════════════
+//  main.scss  –  Sandubão Lanches
+//  Importa todos os partials em ordem
+// ════════════════════════════════════════════════════
+
+@use 'variables';   // tokens: cores, fontes, breakpoints
+@use 'base';        // reset, body, :focus-visible, hr
+@use 'typography';  // títulos reutilizáveis
+@use 'header';      // header, nav, skip-link, logo
+@use 'layout';      // main, .secao
+@use 'cardapio';    // lista-itens, lista-simples, destaque-preco
+@use 'footer';      // footer, formulário de cadastro

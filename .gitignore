@@ -1,0 +1,17 @@
+#dependencies
+node_modules/
+
+#build gerada pelo scss
+dist/
+*.css.map
+
+#sistema operacional
+.DS_Store
+Thumbs.db
+
+#editor de código
+.vscode/
+.idea/
+
+#variáveis de ambiente ( senhas, chaves de API, etc)
+.env

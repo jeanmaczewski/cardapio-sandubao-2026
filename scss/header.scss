@@ -1,0 +1,128 @@
+@use 'variables' as *;
+
+// ── Skip link (acessibilidade) ─────────────────────
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: $amarelo;
+  color: $texto;
+  padding: 0.5rem 1rem;
+  border-radius: $radius;
+  font-weight: 700;
+  z-index: 9999;
+  text-decoration: none;
+
+  &:focus {
+    top: 1rem;
+  }
+}
+
+// ── Header ─────────────────────────────────────────
+header {
+  background: $vermelho;
+  color: $branco;
+  padding: 1.5rem 1rem 0;
+}
+
+.header__inner {
+  max-width: $bp-tablet;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.header__marca {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  padding: 0.1rem;
+
+  background: linear-gradient(135deg, #cf0682, #0e9407);
+
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+
+  object-fit: cover;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.header__nome {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__titulo {
+  font-family: $font-titulo;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 700;
+  color: $amarelo;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.slogan {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: $amarelo-claro;
+  quotes: none;
+}
+// Cabeçalho fixo
+.cabecalho {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 0.8rem 1.2rem;
+}
+
+// ── Navegação ──────────────────────────────────────
+.header__nav {
+  ul {
+    max-width: $bp-tablet;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    background: $amarelo;
+    color: $texto;
+    border-radius: $radius-pill;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 0.2s,
+      transform 0.1s;
+
+    &:hover,
+    &:focus {
+      background: $branco;
+      outline: 3px solid $branco;
+      outline-offset: 2px;
+      transform: translateY(-1px);
+    }
+  }
+}
+.footer__endereco {
+  font-size: 0.8rem;
+  padding: 1rem;
+}
