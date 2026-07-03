@@ -5,13 +5,13 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: $space-lg;
 
   li {
     background: $branco;
     border: 1px solid $cinza-brd;
     border-radius: $radius;
-    padding: 0.85rem 1rem;
+    padding: $space-md2 $space-lg;
     box-shadow: $sombra;
 
     transition:
@@ -22,7 +22,7 @@
     &:hover {
       background: $amarelo-claro;
 
-      box-shadow: 0 4px 16px rgba(44, 34, 24, 0.15);
+      box-shadow: 0 $space-2xs $space-md2 rgba(44, 34, 24, 0.15);
       cursor: pointer;
       border-color: black;
 
@@ -45,14 +45,14 @@
 
 .item__nome {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: $font-md;
   color: $texto;
 }
 
 .item__desc {
-  font-size: 0.85rem;
+  font-size: $font-sm4;
   color: $texto-sub;
-  margin-top: 0.2rem;
+  margin-top: $space-xs;
 }
 
 // ── Lista simples (bebidas) ────────────────────────
@@ -60,18 +60,18 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.6rem;
+  gap: $space-md;
 
   li {
     background: $branco;
     border: 1px solid $cinza-brd;
     border-radius: $radius;
-    padding: 0.6rem 0.9rem;
-    font-size: 0.95rem;
+    padding: $space-md $space-lg;
+    font-size: $font-md;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: $space-sm4;
     transition:
       background 0.2s ease,
       transform 0.2s ease,
@@ -80,7 +80,7 @@
     &:hover {
       background-color: $amarelo-claro;
       transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(44, 34, 24, 0.15);
+      box-shadow: 0 $space-2xs $space-md2 rgba(44, 34, 24, 0.15);
       cursor: pointer;
     }
 
@@ -101,15 +101,15 @@
 .destaque-preco {
   background: $amarelo;
   border-radius: $radius;
-  padding: 1rem 1.25rem;
-  margin-top: 1.2rem;
+  padding: $space-lg $space-lg2;
+  margin-top: $space-lg2;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: $space-md2;
 
   p {
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: $font-md;
     color: $texto;
   }
 
