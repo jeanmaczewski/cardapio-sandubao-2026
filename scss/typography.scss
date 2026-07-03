@@ -3,35 +3,36 @@
 // ── Título principal (h1) ──────────────────────────
 .cardapio__h2 {
   font-family: $font-titulo;
-  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-size: clamp($font-2xl, 5vw, $font-3xl);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: $space-sm;
   text-align: center;
   color: $vermelho;
-  margin-bottom: 2rem;
+  margin-bottom: $space-2xl;
 }
 
 // ── Título de seção ────────────────────────────────
 .secao__titulo {
   font-family: $font-titulo;
-  font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+  font-size: clamp($font-lg, 3.5vw, $font-xl);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: $space-3xs;
   color: $vermelho;
-  border-bottom: 3px solid $amarelo;
-  padding-bottom: 0.35rem;
-  margin-bottom: 1.2rem;
+  border-bottom: $space-xs solid $amarelo;
+  padding-bottom: $space-sm2;
+  margin-bottom: $space-lg2;
 }
+
 // ── Links Sociais ─────────────────────────────────
 .logo__whats {
-  left: 1rem;
-  bottom: 0.8rem;
-  width: 2.7rem;
+  left: $space-lg;
+  bottom: $space-md2;
+  width: $space-3xl;
 }
 .logo__insta {
-  left: 1rem;
-  bottom: 0.8rem;
-  width: 2.7rem;
+  left: $space-lg;
+  bottom: $space-md2;
+  width: $space-3xl;
 }
