@@ -4,17 +4,17 @@
 .skip-link {
   position: absolute;
   top: -100%;
-  left: 1rem;
+  left: $space-lg;
   background: $amarelo;
   color: $texto;
-  padding: 0.5rem 1rem;
+  padding: $space-sm4 $space-lg;
   border-radius: $radius;
   font-weight: 700;
   z-index: 9999;
   text-decoration: none;
 
   &:focus {
-    top: 1rem;
+    top: $space-lg;
   }
 }
 
@@ -22,7 +22,7 @@
 header {
   background: $vermelho;
   color: $branco;
-  padding: 1.5rem 1rem 0;
+  padding: $space-xl $space-lg 0;
 }
 
 .header__inner {
@@ -31,14 +31,14 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  gap: $space-lg;
   justify-content: space-between;
 }
 
 .header__marca {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: $space-lg;
 }
 
 .logo {
@@ -47,11 +47,11 @@ header {
   border-radius: 50%;
   object-fit: cover;
 
-  padding: 0.1rem;
+  padding: $space-3xs;
 
   background: linear-gradient(135deg, #cf0682, #0e9407);
 
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 $space-lg $space-4xl rgba(0, 0, 0, 0.5);
 
   object-fit: cover;
 
@@ -67,25 +67,19 @@ header {
 
 .header__titulo {
   font-family: $font-titulo;
-  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-size: clamp($font-2xl, 5vw, $font-4xl);
   font-weight: 700;
   color: $amarelo;
   line-height: 1;
   letter-spacing: 1px;
 }
 
-.slogan {
-  font-size: 0.95rem;
-  font-style: italic;
-  color: $amarelo-claro;
-  quotes: none;
-}
 // Cabeçalho fixo
 .cabecalho {
   position: sticky;
   top: 0;
   left: 0;
-  padding: 0.8rem 1.2rem;
+  padding: $space-md2 $space-lg2;
 }
 
 // ── Navegação ──────────────────────────────────────
@@ -96,17 +90,17 @@ header {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.25rem;
-    padding: 0.5rem 1rem;
+    gap: $space-xs;
+    padding: $space-sm4 $space-lg;
   }
 
   a {
     display: inline-block;
-    padding: 0.35rem 0.9rem;
+    padding: $space-sm2 $space-md2;
     background: $amarelo;
     color: $texto;
     border-radius: $radius-pill;
-    font-size: 0.85rem;
+    font-size: $font-sm4;
     font-weight: 700;
     text-decoration: none;
     transition:
@@ -116,13 +110,14 @@ header {
     &:hover,
     &:focus {
       background: $branco;
-      outline: 3px solid $branco;
-      outline-offset: 2px;
+      outline: $space-xs solid $branco;
+      outline-offset: $space-3xs;
       transform: translateY(-1px);
     }
   }
 }
+
 .footer__endereco {
-  font-size: 0.8rem;
-  padding: 1rem;
+  font-size: $font-sm4;
+  padding: $space-lg;
 }
