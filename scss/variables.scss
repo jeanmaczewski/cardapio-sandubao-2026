@@ -18,13 +18,49 @@ $azul-escuro: #043464;
 $font-base: 'Nunito', sans-serif;
 $font-titulo: 'Oswald', sans-serif;
 
-// ── Espaçamentos ───────────────────────────────────
+// ── Escala de Fontes  ────────────────────────────────────
+$font-3xs: 0.275rem;
+$font-2xs: 0.338rem;
+$font-xs: 0.4rem;
+$font-sm: 0.481rem;
+$font-sm2: 0.575rem;
+$font-sm3: 0.694rem;
+$font-sm4: 0.831rem;
+$font-md: 1rem;
+$font-lg: 1.2rem;
+$font-xl: 1.438rem;
+$font-2lx: 1.725rem;
+$font-3xl: 2.075rem;
+$font-4xl: 2.487rem;
+$font-5xl: 2.987rem;
+$font-6xl: 3.581rem;
+$font-7xl: 4.3rem;
+
+// ── Espaçamento ────────────────────────────────────
 $radius: 10px;
 $radius-pill: 99px;
 
-// ── Sombra ─────────────────────────────────────────
+//──── Escala de Espaçamento ────────────────────────────────
+$space-3xs: 0.131rem;
+$space-2xs: 0.169rem;
+$space-xs: 0.206rem;
+$space-sm: 0.263rem;
+$space-sm2: 0.325rem;
+$space-sm3: 0.406rem;
+$space-sm4: 0.512rem;
+$space-md: 0.637rem;
+$space-lg: 0.8rem;
+$space-xl: 1.562rem;
+$space-2lx: 1.95rem;
+$space-3xl: 2.438rem;
+$space-4xl: 3.05rem;
+$space-5xl: 3.812rem;
+$space-6xl: 4.769rem;
+
+//──── Sombra ────────────────────────────────
 $sombra: 0 2px 12px rgba(44, 34, 24, 0.1);
 
 // ── Breakpoints ────────────────────────────────────
 $bp-mobile: 600px;
 $bp-tablet: 900px;
+$bp-mobile: 600px;
