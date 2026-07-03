@@ -4,8 +4,8 @@
 footer {
   background: $vermelho;
   color: $branco;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
+  padding: $space-2xl $space-lg;
+  margin-top: $space-4xl;
 }
 
 .footer__inner {
@@ -13,7 +13,7 @@ footer {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: $space-2xl;
   align-items: start;
 
   @media (max-width: $bp-mobile) {
@@ -23,10 +23,10 @@ footer {
 
 .footer__titulo {
   font-family: $font-titulo;
-  font-size: 1.1rem;
+  font-size: $font-lg;
   font-weight: 600;
   color: $amarelo;
-  margin-bottom: 0.75rem;
+  margin-bottom: $space-md2;
 }
 
 footer {
@@ -42,15 +42,15 @@ footer {
     &:hover,
     &:focus {
       text-decoration: underline;
-      outline: 2px solid $amarelo;
-      outline-offset: 2px;
-      border-radius: 3px;
+      outline: $space-3xs solid $amarelo;
+      outline-offset: $space-3xs;
+      border-radius: $space-xs;
     }
   }
 
   p {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+    margin-bottom: $space-sm4;
+    font-size: $font-md;
   }
 }
 
@@ -58,29 +58,31 @@ footer {
 .form-cadastro {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: $space-md2;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: $space-sm;
 
   label {
-    font-size: 0.875rem;
+    font-size: $font-sm4;
     font-weight: 600;
     color: $amarelo-claro;
   }
 
   input {
-    padding: 0.6rem 0.85rem;
+    padding: $space-md $space-md2;
     border-radius: $radius;
     border: 2px solid transparent;
     font-family: $font-base;
-    font-size: 0.95rem;
+    font-size: $font-md;
     background: rgba($branco, 0.12);
     color: $branco;
-    transition: border-color 0.2s, background 0.2s;
+    transition:
+      border-color 0.2s,
+      background 0.2s;
 
     &::placeholder {
       color: rgba($branco, 0.5);
@@ -95,7 +97,7 @@ footer {
 }
 
 .form-hint {
-  font-size: 0.8rem;
+  font-size: $font-sm4;
   color: $amarelo-claro;
 }
 
@@ -104,20 +106,22 @@ footer {
   color: $texto;
   border: none;
   border-radius: $radius;
-  padding: 0.7rem 1.5rem;
+  padding: $space-md $space-xl;
   font-family: $font-base;
-  font-size: 1rem;
+  font-size: $font-md;
   font-weight: 700;
   cursor: pointer;
   align-self: flex-start;
-  transition: background 0.2s, transform 0.1s;
+  transition:
+    background 0.2s,
+    transform 0.1s;
 
   &:hover,
   &:focus {
     background: $amarelo-dk;
     transform: translateY(-2px);
-    outline: 3px solid $branco;
-    outline-offset: 2px;
+    outline: $space-xs solid $branco;
+    outline-offset: $space-3xs;
   }
 
   &:active {
