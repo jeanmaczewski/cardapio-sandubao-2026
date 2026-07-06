@@ -79,6 +79,21 @@ function mostrarErro(campo, valido, mensagem) {
   return valido;
 }
 
+//Mensagem de Validação do Cadastro
+
+function mostrarSucesso() {
+  const mensagem = document.createElement('div');
+  mensagem.className = 'form-sucesso';
+  mensagem.textContent =
+    'Cadastro enviado com sucesso! Bem-vindo à família Sandubão.';
+
+  formulario.parentElement.insertBefore(mensagem, formulario);
+
+  setTimeout(() => {
+    mensagem.remove();
+  }, 4000);
+}
+
 // ── Validação no envio ──────────────────────────────
 formulario.addEventListener('submit', (evento) => {
   evento.preventDefault();
@@ -105,7 +120,7 @@ formulario.addEventListener('submit', (evento) => {
   );
 
   if (nomeValido && cpfValido && emailValido && telefoneValido) {
-    alert('Cadastro enviado com sucesso!');
+    mostrarSucesso();
     formulario.reset();
   }
 });
