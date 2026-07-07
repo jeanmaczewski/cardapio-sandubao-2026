@@ -131,23 +131,29 @@ footer {
 
 //Mensagem de Cadastro Sucesso
 .form-sucesso {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: $verde;
   color: $branco;
-  padding: $space-md $space-lg;
+  padding: $space-lg $space-xl;
   border-radius: $radius;
-  margin-bottom: $space-lg;
   font-weight: 700;
   text-align: center;
+  box-shadow: $sombra;
+  z-index: 9999;
+  max-width: 90%;
   animation: fadeIn 0.3s ease;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translate(-50%, -60%);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
   }
 }
