@@ -1,0 +1,159 @@
+@use 'variables' as *;
+
+// ── Footer ─────────────────────────────────────────
+footer {
+  background: $vermelho;
+  color: $branco;
+  padding: $space-2xl $space-lg;
+  margin-top: $space-4xl;
+}
+
+.footer__inner {
+  max-width: $bp-tablet;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-2xl;
+  align-items: start;
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer__titulo {
+  font-family: $font-titulo;
+  font-size: $font-lg;
+  font-weight: 600;
+  color: $amarelofr;
+  margin-bottom: $space-md2;
+}
+
+footer {
+  address {
+    font-style: normal;
+  }
+
+  a {
+    color: $amarelofr;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      outline: $space-3xs solid $amarelo;
+      outline-offset: $space-3xs;
+      border-radius: $space-xs;
+    }
+  }
+
+  p {
+    margin-bottom: $space-sm4;
+    font-size: $font-md;
+  }
+}
+
+// ── Formulário de cadastro ─────────────────────────
+.form-cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md2;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  label {
+    font-size: $font-sm4;
+    font-weight: 600;
+    color: $amarelofr;
+  }
+
+  input {
+    padding: $space-md $space-md2;
+    border-radius: $radius;
+    border: 2px solid transparent;
+    font-family: $font-base;
+    font-size: $font-md;
+    background: rgba($branco, 0.12);
+    color: $branco;
+    transition:
+      border-color 0.2s,
+      background 0.2s;
+
+    &::placeholder {
+      color: rgba($branco, 0.5);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $amarelo;
+      background: rgba($branco, 0.2);
+    }
+  }
+}
+
+.form-hint {
+  font-size: $font-sm4;
+  color: $amarelofr;
+}
+
+.btn-enviar {
+  background: $amarelo;
+  color: $texto;
+  border: none;
+  border-radius: $radius;
+  padding: $space-md $space-xl;
+  font-family: $font-base;
+  font-size: $font-md;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: flex-start;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+
+  &:hover,
+  &:focus {
+    background: $amarelofr;
+    transform: translateY(-2px);
+    outline: $space-xs solid $branco;
+    outline-offset: $space-3xs;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+//Mensagem de Cadastro Sucesso
+.form-sucesso {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $verde;
+  color: $branco;
+  padding: $space-lg $space-xl;
+  border-radius: $radius;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: $sombra;
+  z-index: 9999;
+  max-width: 90%;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

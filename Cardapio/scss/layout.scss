@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+// ── Main ───────────────────────────────────────────
+main {
+  max-width: $bp-tablet;
+  margin: $space-2xl auto;
+  padding: 0 $space-lg;
+}
+
+// ── Seção genérica ─────────────────────────────────
+.secao {
+  margin-bottom: $space-3xl;
+}

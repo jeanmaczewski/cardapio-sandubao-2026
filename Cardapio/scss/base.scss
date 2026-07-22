@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+// ── Reset ──────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ── HTML ───────────────────────────────────────────
+html {
+  scroll-behavior: smooth;
+}
+
+// ── Body ───────────────────────────────────────────
+body {
+  font-family: $font-base;
+  background-color: $fundo;
+  color: $texto;
+  font-size: $font-md;
+  line-height: 1.7;
+}
+
+// ── Foco visível global ────────────────────────────
+:focus-visible {
+  outline: $space-xs solid $vermelho;
+  outline-offset: $space-xs;
+  border-radius: $space-sm;
+}
+
+// ── Divisor ────────────────────────────────────────
+hr {
+  border: none;
+  border-top: $space-3xs dashed $cinza-brd;
+  margin: $space-3xl 0;
+}
+//-──── Preço ────────────────────────────────────────────
+b {
+  font-weight: 700;
+  color: $verde-dk;
+}

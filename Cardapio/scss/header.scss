@@ -1,0 +1,124 @@
+@use 'variables' as *;
+
+// ── Skip link (acessibilidade) ─────────────────────
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: $space-lg;
+  background: $amarelo;
+  color: $texto;
+  padding: $space-sm4 $space-lg;
+  border-radius: $radius;
+  font-weight: 700;
+  z-index: 9999;
+  text-decoration: none;
+
+  &:focus {
+    top: $space-lg;
+  }
+}
+
+// ── Header ─────────────────────────────────────────
+header {
+  background: $vermelho;
+  color: $branco;
+  padding: $space-xl $space-lg 0;
+}
+
+.header__inner {
+  max-width: $bp-tablet;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-lg;
+  justify-content: space-between;
+}
+
+.header__marca {
+  display: flex;
+  align-items: center;
+  gap: $space-lg;
+}
+
+.logo {
+  width: 100%;
+  max-width: 95px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+
+  padding: $space-3xs;
+
+  background: linear-gradient(135deg, #cf0682, #0e9407);
+
+  box-shadow: 0 $space-lg $space-4xl rgba(0, 0, 0, 0.5);
+
+  object-fit: cover;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.header__nome {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__titulo {
+  font-family: $font-titulo;
+  font-size: clamp($font-2xl, 5vw, $font-4xl);
+  font-weight: 700;
+  color: $amarelofr;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+// Cabeçalho fixo
+.cabecalho {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: $space-md2 $space-lg2;
+}
+
+// ── Navegação ──────────────────────────────────────
+.header__nav {
+  ul {
+    max-width: $bp-tablet;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs;
+    padding: $space-sm4 $space-lg;
+  }
+
+  a {
+    display: inline-block;
+    padding: $space-sm2 $space-md2;
+    background: $amarelo;
+    color: $texto;
+    border-radius: $radius-pill;
+    font-size: $font-sm4;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 0.2s,
+      transform 0.1s;
+
+    &:hover,
+    &:focus {
+      background: $branco;
+      outline: $space-xs solid $branco;
+      outline-offset: $space-3xs;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.footer__endereco {
+  font-size: $font-sm4;
+  padding: $space-lg;
+}
